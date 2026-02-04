@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {API_URL} from "../API/Api";
+import API_URL from "../API/Api";
 
 function AddEmployee() {
   // State for form fields
@@ -26,8 +26,9 @@ function AddEmployee() {
     };
 
     try {
-      const response = await fetch(
-        `${API_URL}/addemployee`,
+      const response = await API_URL.post(
+        
+        `/addemployee`,
 
 
         {
